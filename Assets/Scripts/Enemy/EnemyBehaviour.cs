@@ -29,6 +29,11 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
+    public void Init(Player traget)
+    {
+        _target = traget;
+    }
+
     private void Reset(State startState)
     {
         _currentState = startState;

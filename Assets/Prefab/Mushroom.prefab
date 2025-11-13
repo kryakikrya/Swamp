@@ -11,6 +11,14 @@ GameObject:
   - component: {fileID: 3030810361950135430}
   - component: {fileID: 2724996386479603987}
   - component: {fileID: 5242738688978781893}
+  - component: {fileID: 4000082758428403455}
+  - component: {fileID: 740438723240698343}
+  - component: {fileID: 3038167079591414456}
+  - component: {fileID: 1559794252186103889}
+  - component: {fileID: 5987312874439374150}
+  - component: {fileID: 7569432253293960911}
+  - component: {fileID: 5381715808871694549}
+  - component: {fileID: 3771713905575673715}
   m_Layer: 3
   m_Name: Mushroom
   m_TagString: Untagged
@@ -106,6 +114,119 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4000082758428403455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544095893218834918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da15c2bb5397fc44aefc88392402be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &740438723240698343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544095893218834918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1976dd2cf8a414986f2c766cb2f531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 10
+--- !u!114 &3038167079591414456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544095893218834918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73b1c1e485d76b46ac9f7c2d9b40dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startState: {fileID: 1559794252186103889}
+  _target: {fileID: 0}
+--- !u!114 &1559794252186103889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544095893218834918}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911014b10a8c7814ebc9569862a39604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitions:
+  - {fileID: 5987312874439374150}
+  _speed: 0.002
+--- !u!114 &5987312874439374150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544095893218834918}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed83c0dd20082074f8782666bf67ea52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetState: {fileID: 7569432253293960911}
+  _transitionRange: 2.1
+  _rangeSpread: 0.1
+--- !u!114 &7569432253293960911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544095893218834918}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c56e9f1b51245564db1e2b7961ba4791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitions:
+  - {fileID: 5381715808871694549}
+  _damage: 2
+  _delay: 2
+  _animator: {fileID: 4095273254050595869}
+--- !u!114 &5381715808871694549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544095893218834918}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416c0aac282e288448325306ebb49abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetState: {fileID: 3771713905575673715}
+--- !u!114 &3771713905575673715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544095893218834918}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d10b5b4889b414e99eb8600908d038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitions: []
+  _animator: {fileID: 4095273254050595869}
 --- !u!1 &6500038735173585670
 GameObject:
   m_ObjectHideFlags: 0
