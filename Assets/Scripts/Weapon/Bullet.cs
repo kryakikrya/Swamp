@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     {
         _damage = damage;
         _speed = speed;
+        print("Init");
     }
 
     private void Update()

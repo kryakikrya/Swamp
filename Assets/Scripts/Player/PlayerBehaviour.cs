@@ -1,30 +1,30 @@
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerFacade))]
 public class PlayerBehaviour : MonoBehaviour
 {
-    private PlayerInput _playerInput;
     private PlayerFacade _playerFacade;
-
+    
     private void Awake()
     {
-        _playerInput = GetComponent<PlayerInput>();
         _playerFacade = GetComponent<PlayerFacade>();
     }
 
-    private void OnEnable()
+    private void Update()
     {
-        _playerInput.OnShoot += Shoot;
-        _playerInput.OnNextWeapon += ChangeWeaponNext;
-        _playerInput.OnPreviousWeapon += ChangeWeaponPrevious;
-    }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Shoot();
+        }
 
-    private void OnDisable()
-    {
-        _playerInput.OnShoot -= Shoot;
-        _playerInput.OnNextWeapon -= ChangeWeaponNext;
-        _playerInput.OnPreviousWeapon -= ChangeWeaponPrevious;
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            ChangeWeaponNext();
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            ChangeWeaponPrevious();
+        }
     }
 
     private void Shoot()

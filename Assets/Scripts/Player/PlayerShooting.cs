@@ -15,7 +15,10 @@ public class PlayerShooting : MonoBehaviour
     {
         if (_weaponList.Count > 0)
         {
-            _weaponList[_currentWeaponID].Shoot();
+            if (_weaponList[_currentWeaponID].gameObject.activeSelf == true)
+            {
+                _weaponList[_currentWeaponID].Shoot();
+            }
         }
     }
 
