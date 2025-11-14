@@ -12,7 +12,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
-        Reset(_startState);
+        Reset();
     }
 
     private void Update()
@@ -36,9 +36,9 @@ public class EnemyBehaviour : MonoBehaviour
         _orderInLayer.ChangeLine();
     }
 
-    private void Reset(State startState)
+    private void Reset()
     {
-        _currentState = startState;
+        _currentState = _startState;
 
         if (_currentState != null)
         {

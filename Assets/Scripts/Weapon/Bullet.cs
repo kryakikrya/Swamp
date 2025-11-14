@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Player player) == false)
+        if (collision.TryGetComponent(out Player _) == false)
         {
             if (collision.gameObject.TryGetComponent(out EnemyHealth enemy))
             {
