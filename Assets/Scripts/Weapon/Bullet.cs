@@ -5,6 +5,12 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private float _speed;
 
+    public void Init(int damage, float speed)
+    {
+        _damage = damage;
+        _speed = speed;
+    }
+
     private void Update()
     {
         transform.Translate(Vector2.left * _speed * Time.deltaTime, Space.World);

@@ -4,6 +4,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField] private State _startState;
     [SerializeField] private Player _target;
+    [SerializeField] private EnemyLine _orderInLayer;
 
     private State _currentState;
 
@@ -32,6 +33,7 @@ public class EnemyBehaviour : MonoBehaviour
     public void Init(Player traget)
     {
         _target = traget;
+        _orderInLayer.ChangeLine();
     }
 
     private void Reset(State startState)

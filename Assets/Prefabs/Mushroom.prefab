@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7569432253293960911}
   - component: {fileID: 5381715808871694549}
   - component: {fileID: 3771713905575673715}
+  - component: {fileID: 5377368293905765935}
   m_Layer: 3
   m_Name: Mushroom
   m_TagString: Untagged
@@ -153,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startState: {fileID: 1559794252186103889}
   _target: {fileID: 0}
+  _orderInLayer: {fileID: 5377368293905765935}
 --- !u!114 &1559794252186103889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,8 +199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitions:
   - {fileID: 5381715808871694549}
-  _damage: 2
-  _delay: 2
+  _damage: 0
+  _delay: 0.5
   _animator: {fileID: 4095273254050595869}
 --- !u!114 &5381715808871694549
 MonoBehaviour:
@@ -227,6 +229,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitions: []
   _animator: {fileID: 4095273254050595869}
+--- !u!114 &5377368293905765935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544095893218834918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a60e69ba14307a48aebf9bbfd8ad97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 689776880719739748}
+  _minOrder: -2
+  _maxOrder: 4
 --- !u!1 &6500038735173585670
 GameObject:
   m_ObjectHideFlags: 0

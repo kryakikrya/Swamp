@@ -1,25 +1,32 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerShooting))]
 [RequireComponent(typeof(PlayerHealth))]
-[RequireComponent(typeof(PlayerAnimation))]
 public class PlayerFacade : MonoBehaviour
 {
     [SerializeField] private PlayerDestroyer _destoyer;
     private PlayerShooting _shootingComponent;
     private PlayerHealth _healthComponent;
-    private PlayerAnimation _animationComponent;
+
+    [SerializeField] private List<Weapon> _addableWeapons;
+
+    public List<Weapon> Weapons => _addableWeapons;
 
     private void Start()
     {
         _shootingComponent = GetComponent<PlayerShooting>();
         _healthComponent = GetComponent<PlayerHealth>();
-        _animationComponent = GetComponent<PlayerAnimation>();
     }
 
     public void Shoot()
     {
         _shootingComponent.Shoot();
+    }
+
+    public void AddWeapon(GameObject weaponPrefab)
+    {
+        _shootingComponent.AddWeapon(weaponPrefab);
     }
 
     public void ChangeNextWeapon()

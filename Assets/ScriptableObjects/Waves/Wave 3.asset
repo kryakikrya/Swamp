@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975a9885339e81048a4e1f7bb27bba59, type: 3}
   m_Name: Wave 3
   m_EditorClassIdentifier: 
-  EnemyPrefabs: []
-  Counts: 
-  Delay: 0
+  EnemyPrefabs:
+  - {fileID: 1544095893218834918, guid: c1bb85de8681c1b4580961f087dad34d, type: 3}
+  - {fileID: 2472930814757998018, guid: e8e8e22447a9b16478c79a28bc7b1d24, type: 3}
+  - {fileID: 1544095893218834918, guid: c1bb85de8681c1b4580961f087dad34d, type: 3}
+  Counts: 010000000200000001000000
+  Delay: 3

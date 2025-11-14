@@ -1,7 +1,9 @@
 using UnityEngine;
+
 public class EnemyHealth : MonoBehaviour, IDamagable
 {
     [SerializeField] private int _maxHealth;
+
     private int _health;
 
     private void Start()
